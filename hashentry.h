@@ -5,12 +5,12 @@
 #ifndef HASHENTRY_H
 #define HASHENTRY_H
 
-template<class T>
+template<class T1,class T2>
 class HashEntry{
 public:
-    T key;
-    int value;
-    HashEntry<T>(T key,int value);
+    T1 key;
+    T2 value;
+    HashEntry<T1,T2>(T1 key,T2 value);
 private:
 };
 

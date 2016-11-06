@@ -9,7 +9,8 @@ using namespace std;
 
 int main() {
     string key="hello";
-    HashEntry<string> *he=new HashEntry<string>(key, 123);
+    HashEntry<string,int> *he=new HashEntry<string,int>(key, 123);
+    cout << he << endl;
     cout << "Finished OK!" << endl;
 
     return 0;

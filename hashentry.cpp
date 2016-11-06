@@ -6,8 +6,8 @@
 #include "hashentry.h"
 
 using namespace std;
-template<class T>
-HashEntry<T>::HashEntry(T key,int value){
+template<class T1,class T2>
+HashEntry<T1,T2>::HashEntry(T1 key,T2 value){
     this->key=key;
     this->value=value;
 }
