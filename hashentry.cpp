@@ -7,7 +7,7 @@
 
 using namespace std;
 template<class T>
-HashEntry<T>::HashEntry(T * key,int value){
+HashEntry<T>::HashEntry(T key,int value){
     this->key=key;
     this->value=value;
 }

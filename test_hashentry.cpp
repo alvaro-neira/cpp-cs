@@ -8,10 +8,8 @@
 using namespace std;
 
 int main() {
-    char * key=new char[6];
-    key[0]='h';
-    key[1]='\0';
-    HashEntry<char> *he=new HashEntry<char>(key, 123);
+    string key="hello";
+    HashEntry<string> *he=new HashEntry<string>(key, 123);
     cout << "Finished OK!" << endl;
 
     return 0;

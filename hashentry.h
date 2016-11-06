@@ -8,9 +8,9 @@
 template<class T>
 class HashEntry{
 public:
-    T * key;
+    T key;
     int value;
-    HashEntry<T>(T * key,int value);
+    HashEntry<T>(T key,int value);
 private:
 };
 
