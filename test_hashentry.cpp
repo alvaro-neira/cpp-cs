@@ -8,12 +8,10 @@
 using namespace std;
 
 int main() {
-    Node<char> *a=new Node<char>('a');
-    Node<char> *b=new Node<char>('b',a);
-    Node<char> *c=new Node<char>('c',b);
-    a->print();
-    b->print();
-    c->print();
+    char * key=new char[6];
+    key[0]='h';
+    key[1]='\0';
+    HashEntry<char> *he=new HashEntry<char>(key, 123);
     cout << "Finished OK!" << endl;
 
     return 0;
