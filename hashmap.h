@@ -11,7 +11,11 @@ class HashMap{
 public:
     HashMap();
     HashEntry<string,int> **table;
-
+    /**
+     * TODO: returns -1 if not found. This is not reliable
+     * @param key
+     * @return
+     */
     int get(string key);
     void put(string key, int value);
     ~HashMap();

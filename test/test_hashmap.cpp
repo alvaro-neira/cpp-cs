@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "hashmap.cpp"
+#include "../hashmap.cpp"
 
 using namespace std;
 
@@ -18,6 +18,7 @@ int main() {
     cout << hashMap->get("si") << endl;
     cout << hashMap->get("no") << endl;
     cout << hashMap->get("a") << endl;
+    cout << hashMap->get("nonexistant") << endl;
     cout << "Finished OK!" << endl;
 
     return 0;

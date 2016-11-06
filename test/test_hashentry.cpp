@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "hashentry.cpp"
+#include "../hashentry.cpp"
 
 using namespace std;
 

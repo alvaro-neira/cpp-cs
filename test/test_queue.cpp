@@ -3,9 +3,9 @@
 //
 
 #include <iostream>
-#include "hashmap.cpp"
-#include "node.cpp"
-#include "queue.cpp"
+#include "../hashmap.cpp"
+#include "../node.cpp"
+#include "../queue.cpp"
 
 using namespace std;
 
