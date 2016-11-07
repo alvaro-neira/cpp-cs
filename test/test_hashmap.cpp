@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
     HashMap *hashMap=new HashMap();
-    cout << hashMap->table << endl;
+    cout << hashMap->buckets << endl;
     hashMap->put("hola",123);
     hashMap->put("si",1);
     hashMap->put("no",-123);

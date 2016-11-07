@@ -1,16 +1,17 @@
 //
 // Created by Alvaro on 11/6/16.
+// TODO: COLISIONS!!!
 //
 
 #ifndef HASHMAP_H
 #define HASHMAP_H
 #include "hashentry.cpp"
-#define TABLE_SIZE 128
+#define TABLE_SIZE 1048576
 //template<class T>
 class HashMap{
 public:
     HashMap();
-    HashEntry<string,int> **table;
+    HashEntry<string,int> **buckets;
     /**
      * TODO: returns -1 if not found. This is not reliable
      * @param key

@@ -9,35 +9,37 @@
 using namespace std;
 //template<class T>
 HashMap::HashMap() {
-    table = new HashEntry<string,int>*[TABLE_SIZE];
+    buckets = new HashEntry<string,int>*[TABLE_SIZE];
     for (int i = 0; i < TABLE_SIZE; i++)
-        table[i] = NULL;
+        buckets[i] = NULL;
 }
 
 int HashMap::get(string key) {
     int hash = hashFunction(key,1);
-    while (table[hash] != NULL && table[hash]->key != key)
+    while (buckets[hash] != NULL && buckets[hash]->key != key)
         hash = (hash + 1) % TABLE_SIZE;
-    if (table[hash] == NULL)
+    if (buckets[hash] == NULL)
         return -1;
     else
-        return table[hash]->value;
+        return buckets[hash]->value;
 }
 
 void HashMap::put(string key, int value) {
-    unsigned long int hash = hashFunction(key,1);
-    while (table[hash] != NULL && key.compare(table[hash]->key)!=0)
+    unsigned long int hash = hashFunction(key,key.length());
+    while (buckets[hash] != NULL && key.compare(buckets[hash]->key)!=0) {
         hash = (hash + 1) % TABLE_SIZE;
-    if (table[hash] != NULL)
-        delete table[hash];
-    table[hash] = new HashEntry<string,int>(key, value);
+    }
+    if (buckets[hash] != NULL) {
+        delete buckets[hash];
+    }
+    buckets[hash] = new HashEntry<string,int>(key, value);
 }
 
 HashMap::~HashMap() {
     for (int i = 0; i < TABLE_SIZE; i++)
-        if (table[i] != NULL)
-            delete table[i];
-    delete[] table;
+        if (buckets[i] != NULL)
+            delete buckets[i];
+    delete[] buckets;
 }
 
 /**
